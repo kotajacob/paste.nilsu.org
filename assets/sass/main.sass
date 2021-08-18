@@ -1,0 +1,46 @@
+$font-stack: Helvetica, sans-serif
+$light-background-color: #fff
+$light-foreground-color: #222
+$dark-foreground-color: #eee
+$dark-background-color: #000
+$light-primary-color: #76657f
+$dark-primary-color: #8b7a95
+$mid-color: #aaa
+$transparent-color: #aaa0
+
+body
+  font: 100% $font-stack
+  color: $dark-foreground-color
+  background-color: $dark-background-color
+  margin: 120px 20px
+  @media (prefers-color-scheme: light)
+    color: $light-foreground-color
+    background-color: $light-background-color
+
+.content
+  margin: auto
+  max-width: 600px
+
+.site-title
+  font-size: 3em
+  text-align: center
+  a
+    text-decoration-color: $dark-primary-color
+    @media (prefers-color-scheme: light)
+      text-decoration-color: $light-primary-color
+
+a
+  color: $dark-foreground-color
+  &:hover, &:active, &:focus
+    color: $dark-primary-color
+  @media (prefers-color-scheme: light)
+    color: $light-foreground-color
+    &:hover, &:active, &:focus
+      color: $light-primary-color
+
+code
+  font-weight: bold
+  font-family: monospace, monospace
+  color: $dark-primary-color
+  @media (prefers-color-scheme: light)
+    color: $light-primary-color
