@@ -5,8 +5,6 @@ $dark-foreground-color: #eee
 $dark-background-color: #000
 $light-primary-color: #76657f
 $dark-primary-color: #8b7a95
-$mid-color: #aaa
-$transparent-color: #aaa0
 
 body
   font: 100% $font-stack
@@ -19,7 +17,7 @@ body
 
 .content
   margin: auto
-  max-width: 600px
+  max-width: 400px
 
 .site-title
   font-size: 3em
@@ -38,9 +36,47 @@ a
     &:hover, &:active, &:focus
       color: $light-primary-color
 
-code
+form
+  margin: 0 auto
+  max-width: 300px
+
+form > * + *
+  margin-block-start: 1rem;
+
+input
+  display: block
+
+input[type="file"]::file-selector-button
   font-weight: bold
-  font-family: monospace, monospace
-  color: $dark-primary-color
+  border-radius: 0.25rem;
+  padding: 0 1rem
+  height: 3rem
+  cursor: pointer
+  color: $dark-foreground-color
+  background-color: $dark-background-color
+  border: 1px solid $dark-primary-color
+  box-shadow: none
+  margin-right: 1rem
+  transition: background-color 200ms
   @media (prefers-color-scheme: light)
-    color: $light-primary-color
+    color: $light-foreground-color
+    background-color: $light-background-color
+    border: 1px solid $light-primary-color
+
+input[type="submit"]
+  font-weight: bold
+  width: 100%
+  border-radius: 0.25rem;
+  padding: 0 1rem
+  height: 3rem
+  cursor: pointer
+  color: $light-foreground-color
+  background-color: $dark-primary-color
+  border: 1px solid $dark-primary-color
+  box-shadow: none
+  margin-right: 1rem
+  transition: background-color 200ms
+  @media (prefers-color-scheme: light)
+    color: $dark-foreground-color
+    background-color: $light-primary-color
+    border: 1px solid $light-primary-color
